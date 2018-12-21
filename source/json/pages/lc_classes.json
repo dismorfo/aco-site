@@ -1,0 +1,35 @@
+{
+    "browsecategories": {
+        "htmltitle": "Browse Categories",
+        "title": [{
+            "language_code": "en",
+            "language_dir": "ltr",
+            "html": "Browse Categories"
+        }, {
+            "language_code": "ar",
+            "language_dir": "rtl",
+            "html": "عن هذا المشروع"
+        }],
+        "menu": [{
+            "context": "navbar",
+            "label": "Browse Categories",
+            "weight": 5
+        }],
+        "route": "/browsecategories/index.html",
+        "bodyClass": "page browsecategories",
+        "content": {
+            "main": [{
+                "language_code": "ar",
+                "class": "col-r",
+                "language_dir": "rtl",
+                "html": "<h3>ما هو هدف هذا المشروع؟ </h3><p>يهدف مشروع المجموعات العربية على الإنترنت إلى رقمنة وحفظ وتوفير الولوج المفتوح لمجموعة واسعة من كتب في اللغة العربية في مواضيع الأدب والفلسفة والقانون والدين وغيرها. حالياً، العديد من المحتويات المهمّة في اللغة العربية ليست متوفِّرة على نطاق واسع على الإنترنت. مشروع المجموعات العربية على الإنترنت يضمن الولوج العالمي لمكتبة رقميّة غنيّة بمجموعتها العربية. العديد من الكتب العربية القديمة النافذة من الطباعة، وسهلة التفتت، أصبحت نادرة ومُعرّ ضة لخطر الضياع. مشروع المجموعات العربية على الإنترنت يضمن حِفظ هذه الكتب رقمياًّ لأجيال المستقبل. </p>"
+            },
+            {
+                "language_code": "en",
+                "class": "col-l",
+                "language_dir": "ltr",
+                "html": "<h3>What is the purpose of the project?</h3><p>ACO aims to digitize, preserve, and provide free open access to a wide variety of Arabic language books in subjects such as literature, philosophy, law, religion, and more. Important Arabic language content is not widely available on the web, and ACO aims to ensure global access to a rich Arabic library collection. Many older Arabic books are out-of-print, in fragile condition, and are otherwise rare materials that are in danger of being lost. ACO will ensure that this content will be saved digitally for future generations.</p>"
+            }]
+        }
+    }
+}

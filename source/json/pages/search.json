@@ -14,7 +14,7 @@
     "bodyClass": "search io-loading",
     "content": {
       "items": {
-        "source": "http://dev-discovery.dlib.nyu.edu:8983/solr/viewer/select",
+        "source": "http://stagediscovery.dlib.nyu.edu:8983/solr/viewer/select",
         "rows": 10,
         "fl": [
           "ss_representative_image", 
@@ -43,7 +43,8 @@
           "ss_ar_publocation", 
           "ss_ar_publication_location",
           "ds_created",
-          "score"
+          "score",
+          "ss_call_number"
         ],
         "fq": [
           {
