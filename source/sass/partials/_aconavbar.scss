@@ -349,7 +349,9 @@ nav.navbar.navbar-default {
   body.search a.searchcollections,
   body.browse a.browse,
   body.resources a.resources,
-  body.about a.about {
+  body.about a.about,
+  body.categories a.loc_class,
+  body.categories a.categories {
     // color: $input-border-focus;
     &:link {
       // color: #acabb1;

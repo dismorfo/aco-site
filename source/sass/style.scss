@@ -182,7 +182,7 @@ body.book {
 @import "partials/about";
 
 .categories {
- 
+
     h2.page-title[lang="ar"] {
         margin-bottom: 0;
     }
@@ -193,33 +193,45 @@ body.book {
 
     .grp {
 
-        padding: 8px 0 3px;
+        padding: 5px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        border-bottom: 1px solid #ddd;
 
-        a:link .catcount {
+        border-bottom: 1px solid #e8d8cb;
+
+        a:link .catcount,
+        a:visited .catcount {
             color: #666;
             font-weight: normal;
+            font-size: .85rem;
         }
 
         >div {
             flex: 1 1 50%;
         }
 
+        .flex-l {
+
+            padding-right: 5px;
+        }
+
         .flex-r {
             text-align: right;
-            font-size: 1.2rem
+            font-size: 1.2rem;
+            padding-left: 5px;
         }
 
         p {
             font-size: .9rem
         }
     }
+
     .grp.info {
-      [lang="ar"] {
-        line-height: inherit;
-      }
+        clear: both;
+
+        [lang="ar"] {
+            line-height: inherit;
+        }
     }
 }
