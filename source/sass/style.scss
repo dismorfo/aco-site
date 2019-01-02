@@ -181,25 +181,45 @@ body.book {
 
 @import "partials/about";
 
-.browsecategories .grp {
-    padding: 8px 0 3px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 1px solid #ddd;
-
-    a:link .catcount {
-        color: #666;
-        font-weight: normal;
+.categories {
+ 
+    h2.page-title[lang="ar"] {
+        margin-bottom: 0;
     }
 
-    >div {
-        flex: 1 1 50%;
+    h3 {
+        margin-top: 0;
     }
 
-    .flex-r {
-        text-align: right;
-        font-size: 1.2rem
-    }
+    .grp {
 
+        padding: 8px 0 3px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+
+        a:link .catcount {
+            color: #666;
+            font-weight: normal;
+        }
+
+        >div {
+            flex: 1 1 50%;
+        }
+
+        .flex-r {
+            text-align: right;
+            font-size: 1.2rem
+        }
+
+        p {
+            font-size: .9rem
+        }
+    }
+    .grp.info {
+      [lang="ar"] {
+        line-height: inherit;
+      }
+    }
 }
