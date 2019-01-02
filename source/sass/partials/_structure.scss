@@ -1,157 +1,186 @@
 html {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
 }
 
 body {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  font-family: $font-family-sans-serif;
-  color: $text-color;
-  background-color: $body-bg;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-family: $font-family-sans-serif;
+    color: $text-color;
+    background-color: $body-bg;
 }
 
 [lang="ar"] {
-  font-family: $font-family-arabic;
-  line-height: 1.6;
+    font-family: $font-family-arabic;
+    line-height: 1.6;
 }
 
 .container-fluid {
-  width: 100%;
-  max-width: 990px;
-  padding-left: 4%;
-  padding-right: 4%;
-  @media (min-width: $grid-float-breakpoint) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  margin: 0px auto;
-  overflow: hidden;
+    width: 100%;
+    max-width: 990px;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    @media (min-width: $grid-float-breakpoint) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    margin: 0px auto;
+    overflow: hidden;
 }
 
-main {
-  min-height: 400px;
-  padding-top:35px;
-  a:link,
-  a:focus {
-    font-weight: bold;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-position: inside;
-  }
-  li {
-    padding-left: .1rem;
-    padding-right: .1rem;
-  }
-  p {
-    margin: 1rem 0;
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  h2.page-title {
+h2.page-title {
     font-size: 1.5rem;
     font-weight: 300;
     text-shadow: 0px 0px 1px white;
     margin: 0 0 1rem 0;
+
     &[lang="en"] {
-      margin-top: 0;
-      float: left;
-      clear: left;
-      @media (min-width: $grid-float-breakpoint) {
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-      @media (max-width: 400px) {
-        margin-bottom: .5rem;
-      }
-    }
-    &[lang="ar"] {
-      span {
-        display: inline-block;
-        margin-left: 20px;
-      }
-      @media (min-width: $grid-float-breakpoint) {
-        margin: 1rem 0 1.5rem;
-      }
-    }
-    @media (min-width: $grid-float-breakpoint) {
-      font-size: 2rem;
-    }
-  }
-  .resultsnum {
-    font-size: .8em;
-    color: #666;
-    float: left;
-    padding-top: 10px;
-    @media (max-width: 400px) {
-      display: block;
-      clear: both;
-      float: none;
-    }
-    .s-query {
-      font-weight: bold;
-    }
-  }
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin: 1rem 0 1rem;
-    text-shadow: 0px 0px 1px white;
-    @media (max-width: $grid-float-breakpoint-max) {
-      margin: 2rem 0 1rem;
-    }
-  }
-  header {
-    @include clearfix;
-    padding-bottom: .5rem;
-  }
-  [lang="en"] .readmore {
-    // font: 1rem / 1.2 $font-family-sans-serif;
-    font-size: .8rem;
-    font-family: $font-family-sans-serif;
-    font-weight: normal;
-    @media (min-width: $grid-float-breakpoint) {
-      font-size: 1rem;
-    }
-  }
-  // [lang="ar"] .readmore {
-  //   padding-right: 10px;
-  //   display: inline-block;
-  // }
-  .col-r {
-    // in mobile view, add some space above arabic text
-    // margin-top: 1.5rem;
-    // padding: 1.5rem 0 1px;
-    // box-shadow: 0px -1px 0px 0px #DECCBF;
-    // border-top: 1px solid #FFFFFF;
-    @media (min-width: $grid-float-breakpoint) {
-      // in desktop view, we don't need space above arabic text
-      margin-top: 0em;
-      padding: 0 0 0;
-      box-shadow: none;
-      border-top: none;
-    }
-  }
-  .col-l {
-    clear: both;
-    @media (min-width: $grid-float-breakpoint) {
-      width: 46%;
-      &[lang="en"] {
+        margin-top: 0;
         float: left;
-      }
+        clear: left;
+
+        @media (min-width: $grid-float-breakpoint) {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 400px) {
+            margin-bottom: .5rem;
+        }
     }
-  }
-  .col-r {
+
+    &[lang="ar"] {
+        span {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        @media (min-width: $grid-float-breakpoint) {
+            margin: 1rem 0 1.5rem;
+        }
+    }
+
     @media (min-width: $grid-float-breakpoint) {
-      width: 46%;
-      &[lang="ar"] {
-        float: right;
-        // There is a clear:right bug in IE
-        // clear: right;
-      }
+        font-size: 2rem;
     }
-  }
+}
+
+main {
+    min-height: 400px;
+    padding-top: 35px;
+
+    a:link,
+    a:focus {
+        font-weight: bold;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    li {
+        padding-left: .1rem;
+        padding-right: .1rem;
+    }
+
+    p {
+        margin: 1rem 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .resultsnum {
+        font-size: .8em;
+        color: #666;
+        float: left;
+        padding-top: 10px;
+
+        @media (max-width: 400px) {
+            display: block;
+            clear: both;
+            float: none;
+        }
+
+        .s-query {
+            font-weight: bold;
+        }
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin: 1rem 0 1rem;
+        text-shadow: 0px 0px 1px white;
+
+        @media (max-width: $grid-float-breakpoint-max) {
+            margin: 2rem 0 1rem;
+        }
+    }
+
+    header {
+        @include clearfix;
+        padding-bottom: .5rem;
+    }
+
+    [lang="en"] .readmore {
+        // font: 1rem / 1.2 $font-family-sans-serif;
+        font-size: .8rem;
+        font-family: $font-family-sans-serif;
+        font-weight: normal;
+
+        @media (min-width: $grid-float-breakpoint) {
+            font-size: 1rem;
+        }
+    }
+
+    // [lang="ar"] .readmore {
+    //   padding-right: 10px;
+    //   display: inline-block;
+    // }
+    .col-r {
+
+        // in mobile view, add some space above arabic text
+        // margin-top: 1.5rem;
+        // padding: 1.5rem 0 1px;
+        // box-shadow: 0px -1px 0px 0px #DECCBF;
+        // border-top: 1px solid #FFFFFF;
+        @media (min-width: $grid-float-breakpoint) {
+            // in desktop view, we don't need space above arabic text
+            margin-top: 0em;
+            padding: 0 0 0;
+            box-shadow: none;
+            border-top: none;
+        }
+    }
+
+    .col-l {
+        clear: both;
+
+        @media (min-width: $grid-float-breakpoint) {
+            width: 46%;
+
+            &[lang="en"] {
+                float: left;
+            }
+        }
+    }
+
+    .col-r {
+        @media (min-width: $grid-float-breakpoint) {
+            width: 46%;
+
+            &[lang="ar"] {
+                float: right;
+                // There is a clear:right bug in IE
+                // clear: right;
+            }
+        }
+    }
 }
