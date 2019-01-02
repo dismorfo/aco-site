@@ -1,4 +1,4 @@
-    <div class="flexrow itemhome">
+<div class="flexrow itemhome">
     <div class=" itemhomeCol flexcol" lang="en" dir="ltr">
         <div class="meta" lang="en" dir="ltr">
             <div class="md_title">
@@ -7,14 +7,14 @@
             <div class="md_author">
                 <span class="md_label">Author:</span> {{ifempty sm_author "n.a."}}{{#each sm_author}}<span class="one_author"><a class="md_author" href='/aco/search/?author={{this}}'>{{this}}</a></span>{{/each}}
             </div>
-
-                <div class="md_callno"><span class="md_label">Call number:</span> <span class="callno">{{ss_call_number}}</span></div>
-
- <div class="md_publisher"><span class="md_label">Publisher:</span>
-    {{#if sm_publisher}}
-           {{#each sm_publisher}} {{#if this}}<span><a  class="md_publisher" href='/aco/search/?publisher={{this}}'>{{this}}</a></span>{{else}}n.p.{{/if}}{{/each}}{{/if}} </div> 
-
-    {{#if ss_publocation}}
+            <div class="md_locClass">
+                <span class="md_label">Category:</span>
+                <span class="publoc"><a  class="md_pubplace" href='#'>Language and Literature</a></span></div>
+            <div class="md_callno"><span class="md_label">Call number:</span> <span class="callno">{{ss_call_number}}</span></div>
+            <div class="md_publisher"><span class="md_label">Publisher:</span>
+                {{#if sm_publisher}}
+                {{#each sm_publisher}} {{#if this}}<span><a  class="md_publisher" href='/aco/search/?publisher={{this}}'>{{this}}</a></span>{{else}}n.p.{{/if}}{{/each}}{{/if}} </div>
+            {{#if ss_publocation}}
             <div class="md_pubplace">
                 <span class="md_label">Place of Publication:</span>
                 <span class="publoc"><a  class="md_pubplace" href='/aco/search/?pubplace={{ss_publocation}}'>{{ss_publocation}}</a></span></div>
@@ -22,13 +22,9 @@
             <div class="md_pubdate"><span class="md_label">Date of Publication:</span> <span class="pubdate">{{ss_pubdate}}</span></div>
             {{/if}} {{#if zm_subject}}
             <div class="md_subjects"><span class="md_label">Subjects: </span> {{#each zm_subject}} {{#json this}}
-               <span class="one_subject"><a class="md_subject" href='/aco/search/?subject={{name}}'>{{name}}</a></span> {{/json}} {{/each}}
+                <span class="one_subject"><a class="md_subject" href='/aco/search/?subject={{name}}'>{{name}}</a></span> {{/json}} {{/each}}
             </div>
             {{/if}}
-            <div class="md_locClass">
-              
-                 <span class="md_label">Library of Congress Class:</span>
-                <span class="publoc"><a  class="md_pubplace" href='#'>Language and Literature</a></span></div>
             <div class="md_partner">
                 <span class="md_label">Provider:</span> {{#each zm_partner}} {{#json this}}
                 <a class="md_provider" data-code="{{code}}" data-id="{{nid}}" href='/aco/search/?provider={{name}}'>{{name}}</a> {{/json}} {{/each}}
@@ -52,6 +48,9 @@
             <div class="md_authors">
                 <span class="md_label">الكاتب:</span> {{ifempty sm_ar_author "n.a."}} {{#each sm_ar_author}}<span class="one_author"><a class="md_author" href='/aco/search/?author={{this}}'>{{this}}</a></span>{{/each}}
             </div>
+            <div class="md_locClass">
+                <span class="md_label">تصنيف مكتبة الكونغرس:</span>
+                <span><a  class="md_locClass" href='#'>اللغات والآداب</a></span></div>
             <div class="md_publisher"><span class="md_label">الناشر:</span> {{ifempty sm_ar_publisher "n.p."}} {{#each sm_ar_publisher}}<a class="md_publisher" href='/aco/search/?publisher={{this}}'><span>{{this}}</span></a>{{/each}}</div>
             <div class="md_publocation">
                 <span class="md_label">مكان النشر:</span> {{ifempty ss_ar_publication_location "n.p."}}
@@ -59,9 +58,6 @@
             </div>
             <div class="md_pubdate"><span class="md_label">تاريخ النشر:</span> {{ifempty ss_pubdate "n.d."}}
                 <span dir="ltr" lang="en">{{ss_pubdate}}</span></div>
-             <div class="md_locClass">
-                <span class="md_label">تصنيف مكتبة الكونغرس:</span>
-                <span><a  class="md_locClass" href='#'>اللغات والآداب</a></span></div>
         </div>
     </div>
 </div>
