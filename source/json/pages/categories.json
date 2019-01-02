@@ -1,21 +1,21 @@
 {
-    "loc_class": {
-        "htmltitle": "Library of Congress Classes",
+    "categories": {
+        "htmltitle": "Categories",
         "title": [{
             "language_code": "en",
             "language_dir": "ltr",
-            "html": "Library of Congress Classes"
+            "html": "Categories"
         }, {
             "language_code": "ar",
             "language_dir": "rtl",
-            "html": "الاقسام"
+            "html": "عن هذا المشروع"
         }],
         "menu": [{
             "context": "navbar",
-            "label": "Browse by Library of Congress Class",
+            "label": "Categories",
             "weight": 5
         }],
-        "route": "/loc_class/index.html",
+        "route": "/categories/index.html",
         "bodyClass": "page categories",
         "content": {
             "main": [{
