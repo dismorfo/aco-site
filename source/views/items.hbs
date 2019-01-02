@@ -1,113 +1,106 @@
-      <header class="results-header">
-        <div class="aboutinfo">
-                <div class="aboutinfo-links">
-                    <a href="#" dir="ltr" lang="en" class="aboutinfo-link aboutinfo-link-available"><span></span>About this search</a>
-                    <a href="#" dir="rtl" lang="ar" class="aboutinfo-link aboutinfo-link-available">بخصوص هذا البحث<span class="arrow-left"></a>
-                </div>
-                <div class="about-info-content" style="height:0; overflow:hidden">
-                   &nbsp;
-                </div>
-          </div>
-        <div class="select-style sort-select">
-                <select id="sort-select-el" aria-label="Sorting Criteria">
-                    <option data-sort-dir="desc" value="score">Relevance / فرز حسب</option>
-                    <option data-sort-dir="asc" value="tks_title_long">Title in English / العنوان بالانجليزية</option>
-                    <option data-sort-dir="asc" value="tks_ar_title_long">Title in Arabic / العنوان بالعربية</option>
-                    <option data-sort-dir="asc" value="iass_pubyear">Date of Publication / تاريخ النشر</option>
-                    <option data-sort-dir="asc" value="tks_publocation">Place in English / بلد النشر بالانجليزية</option>
-                    <option data-sort-dir="asc" value="tks_ar_publocation">Place in Arabic / بلد النشر بالعربية</option>
-                    <option data-sort-dir="desc" value="ds_created">Recently added / وضِعت مؤخراً</option>
-                </select>
-            </div>
-            <div class="select-style rpp-select">
-                <select id="rpp-select-el" aria-label="Number of Results Per Page">
-                    <option value="10" selected>10 per page</option>
-                    <option value="20">20 per page</option>
-                    <option value="40">40 per page</option>
-                </select>
-            </div>
-                <div class="resultsnum">Showing <span class="start">1</span> - <span class="docslength">10</span> of <span class="numfound"></span> <span class="resultsfor">results for</span> <span class="s-query"></span></div>
+<header class="results-header">
+    <div class="aboutinfo">
+        <div class="aboutinfo-links">
+            <a href="#" dir="ltr" lang="en" class="aboutinfo-link aboutinfo-link-available"><span></span>About this search</a>
+            <a href="#" dir="rtl" lang="ar" class="aboutinfo-link aboutinfo-link-available">بخصوص هذا البحث<span class="arrow-left"></a>
+        </div>
+        <div class="about-info-content" style="height:0; overflow:hidden">
+            &nbsp;
+        </div>
+    </div>
+    <div class="select-style sort-select">
+        <select id="sort-select-el" aria-label="Sorting Criteria">
+            <option data-sort-dir="desc" value="score">Relevance / فرز حسب</option>
+            <option data-sort-dir="asc" value="tks_title_long">Title in English / العنوان بالانجليزية</option>
+            <option data-sort-dir="asc" value="tks_ar_title_long">Title in Arabic / العنوان بالعربية</option>
+            <option data-sort-dir="asc" value="iass_pubyear">Date of Publication / تاريخ النشر</option>
+            <option data-sort-dir="asc" value="tks_publocation">Place in English / بلد النشر بالانجليزية</option>
+            <option data-sort-dir="asc" value="tks_ar_publocation">Place in Arabic / بلد النشر بالعربية</option>
+            <option data-sort-dir="desc" value="ds_created">Recently added / وضِعت مؤخراً</option>
+        </select>
+    </div>
+    <div class="select-style rpp-select">
+        <select id="rpp-select-el" aria-label="Number of Results Per Page">
+            <option value="10" selected>10 per page</option>
+            <option value="20">20 per page</option>
+            <option value="40">40 per page</option>
+        </select>
+    </div>
+    <div class="resultsnum">Showing <span class="start">1</span> - <span class="docslength">10</span> of <span class="numfound"></span> <span class="resultsfor">results for</span> <span class="s-query"></span></div>
 </header>
-
 <div class="item-list">
-  {{#items}}
-  <div class="item">
-    <div class="l-hold">
-      <div class="thumbs">
-        <a href="{{../app.appRoot}}/book/{{ss_book_identifier}}/1"><img class="img-responsive" src="{{ss_representative_image}}" alt="" title="{{ss_title_long}}"/>
+    {{#items}}
+    <div class="item">
+        <div class="l-hold">
+            <div class="thumbs">
+                <a href="{{../app.appRoot}}/book/{{ss_book_identifier}}/1"><img class="img-responsive" src="{{ss_representative_image}}" alt="" title="{{ss_title_long}}"/>
 <div lang="ar" class="ar_callout" dir="rtl">شاهِد فوراً</div><div dir="ltr" lang="en">Read Online</div>
         </a>
-      </div>
-      <div lang="en">
-        <div class="md_title"><a href="{{../app.appRoot}}/book/{{ss_book_identifier}}/1">{{ss_title_long}}</a></div>                
-        <div class="md_authors"><span class="md_label">Author:</span> 
-        {{ifempty sm_author "n.a."}}
-        {{#each sm_author}}<span class="one_author"><a class="md_author" href='/aco/search/?author={{this}}'>{{this}}</a></span>{{/each}}
-        </div>  
-
-        <div class="md_callno"><span class="md_label">Call number:</span> <span class="callno">{{ss_call_number}}</span></div>
-
-        <div class="md_publisher"><span class="md_label">Publisher:</span>
-    {{#if sm_publisher}}
-           {{#each sm_publisher}} {{#if this}}<span><a  class="md_publisher" href='/aco/search/?publisher={{this}}'>{{this}}</a></span>{{else}}n.p.{{/if}}{{/each}}{{/if}} </div> 
-        <div class="md_pubplace"><span class="md_label">Place of Publication:</span> 
-         {{ifempty ss_publocation "n.p."}}
-         <a  class="md_pubplace" href='/aco/search/?pubplace={{ss_publocation}}'>{{ss_publocation}}</a></div>                        
-        <div class="md_pubdate"><span class="md_label">Date of Publication:</span>
-         {{ifempty ss_pubdate "n.d."}}
-         {{ss_pubdate}}</div>  
-        <div class="md_pubdate_sort"><span class="md_label">Date of Publication, sortable:</span> {{iass_pubyear}}</div>  
-       
-        {{#if zm_subject}}                           
-        <div class="md_subjects">
-          <span class="md_label">Subject:</span>
-          {{#each zm_subject}}
-            {{#json this}}<span class="one_subject">
+            </div>
+            <div lang="en">
+                <div class="md_title"><a href="{{../app.appRoot}}/book/{{ss_book_identifier}}/1">{{ss_title_long}}</a></div>
+                <div class="md_authors"><span class="md_label">Author:</span>
+                    {{ifempty sm_author "n.a."}}
+                    {{#each sm_author}}<span class="one_author"><a class="md_author" href='/aco/search/?author={{this}}'>{{this}}</a></span>{{/each}}
+                </div>
+                <div class="md_callno"><span class="md_label">Call number:</span> <span class="callno">{{ss_call_number}}</span></div>
+                <div class="md_publisher"><span class="md_label">Publisher:</span>
+                    {{#if sm_publisher}}
+                    {{#each sm_publisher}} {{#if this}}<span><a  class="md_publisher" href='/aco/search/?publisher={{this}}'>{{this}}</a></span>{{else}}n.p.{{/if}}{{/each}}{{/if}} </div>
+                <div class="md_pubplace"><span class="md_label">Place of Publication:</span>
+                    {{ifempty ss_publocation "n.p."}}
+                    <a  class="md_pubplace" href='/aco/search/?pubplace={{ss_publocation}}'>{{ss_publocation}}</a></div>
+                <div class="md_pubdate"><span class="md_label">Date of Publication:</span>
+                    {{ifempty ss_pubdate "n.d."}}
+                    {{ss_pubdate}}</div>
+                <div class="md_pubdate_sort"><span class="md_label">Date of Publication, sortable:</span> {{iass_pubyear}}</div>
+                {{#if zm_subject}}
+                <div class="md_subjects">
+                    <span class="md_label">Subject:</span>
+                    {{#each zm_subject}}
+                    {{#json this}}<span class="one_subject">
               <a class="md_subject" href='/aco/search/?subject={{name}}'>{{name}}</a></span>
-            {{/json}}
-          {{/each}}        
+                    {{/json}}
+                    {{/each}}
+                </div>
+                {{/if}}
+                <div class="md_locClass">
+                    <span class="md_label">LOC Class:</span>
+                    <span class="publoc"><a  class="md_pubplace" href='#'>Language and Literature</a></span></div>
+                <div class="md_partner">
+                    <span class="md_label">Provider:</span>
+                    {{#each zm_partner}}
+                    {{#json this}}
+                    <a class="md_provider" data-code="{{code}}" data-id="{{nid}}" href='{{../../../app.appRoot}}/search/?provider={{name}}'>{{name}}</a>
+                    {{/json}}
+                    {{/each}}
+                </div>
+            </div>
         </div>
-         {{/if}}
-     <div class="md_locClass">
-                <span class="md_label">LOC Class:</span>
-                <span class="publoc"><a  class="md_pubplace" href='#'>Language and Literature</a></span></div>
-                
-        <div class="md_partner">
-          <span class="md_label">Provider:</span>
-          {{#each zm_partner}}
-            {{#json this}}
-              <a class="md_provider" data-code="{{code}}" data-id="{{nid}}" href='{{../../../app.appRoot}}/search/?provider={{name}}'>{{name}}</a>
-            {{/json}}
-          {{/each}}
-        </div>        
-      </div>
-    </div>
-    <div dir="rtl" lang="ar">
-      <div class="md_title" dir="rtl" lang="ar"> 
-        <span><a href="{{../app.appRoot}}/book/{{ss_book_identifier}}/1?lang=ar">{{ss_ar_title_long}}</a></span>
-      </div>
-      <div class="md_authors">
-        <span class="md_label">الكاتب:</span> 
-         {{ifempty sm_ar_author "n.a."}}
-        {{#each sm_ar_author}}<span class="one_author"><a class="md_author" href='/aco/search/?author={{this}}'>{{this}}</a></span>{{/each}}
-      </div>
-      <div class="md_publisher"><span class="md_label">الناشر:</span>  
-        {{ifempty sm_ar_publisher "n.p."}}
-        {{#each sm_ar_publisher}}<a  class="md_publisher" href='/aco/search/?publisher={{this}}'><span>{{this}}</span></a>{{/each}}</div>
-
-      <div class="md_publocation">
-        <span class="md_label">مكان النشر:</span> 
-         {{ifempty ss_ar_publication_location "n.p."}}
-         <a  class="md_pubplace" href='/aco/search/?pubplace={{ss_ar_publication_location}}'><span>{{ss_ar_publication_location}}</span></a>
-      </div>  
-      <div class="md_pubdate"><span class="md_label">تاريخ النشر:</span> 
-      {{ifempty ss_pubdate "n.d."}}
-      <span dir="ltr" lang="en" >{{ss_pubdate}}</span></div>                        
-      <div class="md_locClass">
+        <div dir="rtl" lang="ar">
+            <div class="md_title" dir="rtl" lang="ar">
+                <span><a href="{{../app.appRoot}}/book/{{ss_book_identifier}}/1?lang=ar">{{ss_ar_title_long}}</a></span>
+            </div>
+            <div class="md_authors">
+                <span class="md_label">الكاتب:</span>
+                {{ifempty sm_ar_author "n.a."}}
+                {{#each sm_ar_author}}<span class="one_author"><a class="md_author" href='/aco/search/?author={{this}}'>{{this}}</a></span>{{/each}}
+            </div>
+            <div class="md_publisher"><span class="md_label">الناشر:</span>
+                {{ifempty sm_ar_publisher "n.p."}}
+                {{#each sm_ar_publisher}}<a  class="md_publisher" href='/aco/search/?publisher={{this}}'><span>{{this}}</span></a>{{/each}}</div>
+            <div class="md_publocation">
+                <span class="md_label">مكان النشر:</span>
+                {{ifempty ss_ar_publication_location "n.p."}}
+                <a  class="md_pubplace" href='/aco/search/?pubplace={{ss_ar_publication_location}}'><span>{{ss_ar_publication_location}}</span></a>
+            </div>
+            <div class="md_pubdate"><span class="md_label">تاريخ النشر:</span>
+                {{ifempty ss_pubdate "n.d."}}
+                <span dir="ltr" lang="en" >{{ss_pubdate}}</span></div>
+            <div class="md_locClass">
                 <span class="md_label">تصنيف مكتبة الكونغرس:</span>
                 <span><a  class="md_locClass" href='#'>اللغات والآداب</a></span></div>
-  
-    </div>                      
-  </div>
-  {{/items}}
+        </div>
+    </div>
+    {{/items}}
 </div>
