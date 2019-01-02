@@ -10,11 +10,7 @@
       "language_dir": "rtl",
       "html": "تصفح العناوين"
     }],
-    "menu": [{
-      "context": "navbar",
-      "label": "Browse",
-      "weight": 3
-    }],
+ 
     "route": "/browse/index.html",
     "bodyClass": "browse",
     "content": {

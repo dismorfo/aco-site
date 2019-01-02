@@ -1,19 +1,14 @@
 {
     "loc_class": {
-        "htmltitle": "Library of Congress Classes",
+        "htmltitle": "Browse by Library of Congress Class",
         "title": [{
             "language_code": "en",
             "language_dir": "ltr",
-            "html": "Library of Congress Classes"
+            "html": "Browse by Library of Congress Class"
         }, {
             "language_code": "ar",
             "language_dir": "rtl",
-            "html": "الاقسام"
-        }],
-        "menu": [{
-            "context": "navbar",
-            "label": "Browse by Library of Congress Class",
-            "weight": 5
+            "html": "تصنيف مكتبة الكونغرس"
         }],
         "route": "/loc_class/index.html",
         "bodyClass": "page categories",
