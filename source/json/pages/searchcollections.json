@@ -13,7 +13,7 @@
     "menu": [{
       "context": "navbar",
       "label": "Search",
-      "weight": 4
+      "weight": 6
     }],
     "route": "/searchcollections/index.html",
     "bodyClass": "search"

@@ -4,7 +4,7 @@
         "title": [{
             "language_code": "en",
             "language_dir": "ltr",
-            "html": "Categories"
+            "html": "Browse by Category"
         }, {
             "language_code": "ar",
             "language_dir": "rtl",
@@ -12,7 +12,7 @@
         }],
         "menu": [{
             "context": "navbar",
-            "label": "Categories",
+            "label": "Browse by Category",
             "weight": 5
         }],
         "route": "/categories/index.html",

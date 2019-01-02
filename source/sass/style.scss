@@ -213,13 +213,13 @@ body.book {
 
         .flex-l {
 
-            padding-right: 5px;
+            padding-right: 2rem;
         }
 
         .flex-r {
             text-align: right;
             font-size: 1.2rem;
-            padding-left: 5px;
+            padding-left: 2rem;
         }
 
         p {
@@ -229,6 +229,7 @@ body.book {
 
     .grp.info {
         clear: both;
+        padding-bottom: 15px;
 
         [lang="ar"] {
             line-height: inherit;
