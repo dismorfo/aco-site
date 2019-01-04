@@ -4,13 +4,12 @@
     "title": [{
       "language_code": "en",
       "language_dir": "ltr",
-      "html": "Browse titles"
+      "html": "Browse All Books"
     }, {
       "language_code": "ar",
       "language_dir": "rtl",
       "html": "تصفح العناوين"
     }],
- 
     "route": "/browse/index.html",
     "bodyClass": "browse",
     "content": {
