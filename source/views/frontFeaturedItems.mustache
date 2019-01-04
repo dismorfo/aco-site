@@ -10,7 +10,10 @@
             <div class="md_locClass">
                 <span class="md_label">Category:</span>
                 <span class="publoc"><a  class="md_pubplace" href='#'>Language and Literature</a></span></div>
-            <div class="md_callno"><span class="md_label">Call number:</span> <span class="callno">{{ss_call_number}}</span></div>
+
+                  {{#if ss_call_number}}
+            <div class="md_callno"><span class="md_label">Call number:</span> <span class="callno">{{ss_call_number}}</span></div>{{/if}}
+            
             <div class="md_publisher"><span class="md_label">Publisher:</span>
                 {{#if sm_publisher}}
                 {{#each sm_publisher}} {{#if this}}<span><a  class="md_publisher" href='/aco/search/?publisher={{this}}'>{{this}}</a></span>{{else}}n.p.{{/if}}{{/each}}{{/if}} </div>
