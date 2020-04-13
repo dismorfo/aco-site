@@ -71,16 +71,16 @@
     // padding-bottom: 10px;
     // padding-top: 10px;
     &.thumbholder {
-      -ms-flex: 0 1 120px;
-      -webkit-flex: 0 1 120px;
-      flex: 0 1 120px;
+      -ms-flex: 1 1 120px;
+      -webkit-flex: 1 1 120px;
+      flex: 1 1 120px;
     }
     .thumbs {
       // max-width: 105px;
       // width: 80%;
       padding-top: 0;
       margin: 0 auto;
-      padding-left: 30px;
+     // padding-left: 30px;
       padding-bottom: 10px;
       img {
         width: 100%;
@@ -175,6 +175,12 @@
         flex: 1 0 40%;
         // Max width is for an IE11 box-sizing with flexbox bug
         max-width: 40%;
+        &[lang="en"]{
+          padding-right: 40px;
+        }
+        &[lang="ar"]{
+          padding-left: 40px;
+        }
       }
     }
     &.header  .flexcol {
