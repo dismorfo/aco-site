@@ -5,6 +5,9 @@
   @include box-shadow(0px 0px 10px 5px #deccbf);
   width: 100%;
   overflow: auto;
+  background-image: url(/aco/images/bg.svg);
+  background-size: 3350px;
+  background-size: 150px;
 }
 
 .header-main {
@@ -13,6 +16,10 @@
   padding-bottom: 13px;
   display: table !important;
   width: 100%;
+  //background-image: url(/aco/images/flower.svg);
+ // background-repeat: no-repeat;
+ // background-position: right bottom;
+ // background-size: 77px;
   // for mobile, they are stacked
   > div {
     &[lang="en"] {
@@ -68,6 +75,7 @@
       /* tweaking the baseline */
       @media (min-width: $grid-float-breakpoint) {
         margin-bottom: -3px;
+       // margin-right: 65px;
       }
       a {
         letter-spacing: normal;

@@ -91,8 +91,8 @@
     width: auto;
     height: auto;
     padding-top: 10px;
-    box-shadow: inset 0px 1px 0px lighten($brand-primary, 11%);
-    border-top: 1px solid darken($brand-primary, 15%);
+   // box-shadow: inset 0px 1px 0px lighten($brand-primary, 11%);
+   // border-top: 1px solid darken($brand-primary, 15%);
     overflow-y: visible;
     &[style] {
       height: auto !important;
@@ -232,16 +232,11 @@
 // Default navbar
 .navbar-default {
   background-color: $navbar-default-bg;
-  .navbar-navx {
-    > li > a {
-      color: $navbar-default-link-color;
-      &:hover,
-      &:focus {
-        color: $navbar-default-link-hover-color;
-        background-color: $navbar-default-link-hover-bg;
-      }
-    }
-  }
+  //background-color: #27205a;
+  /* background-color: #524e79; */
+  //background-image: url(/aco/images/bg.svg);
+ // background-size: 6px;
+
   // Dropdown menu items
   .navbar-nav {
     // Remove background color from open dropdown
@@ -261,7 +256,9 @@ nav.navbar.navbar-default {
   // overridding bootstrap
   //   border-bottom: 1px solid $brand-primary;
   // border-bottom: 1px solid #DECCBF;
-  box-shadow: 0px 2px 3px rgba(10, 10, 10, .3);
+  //box-shadow: inset 0px 1px 0px #171334;
+  border-top: 1px solid #170a7c;
+  box-shadow: 0px 2px 3px rgba(10, 10, 10, .3), inset 0px 1px 0px  rgba(10, 10, 10, .3);
   li > a {
     font-size: 1rem;
     line-height: 1.5;
