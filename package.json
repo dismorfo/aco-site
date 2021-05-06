@@ -22,7 +22,7 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-curl": "^2.5.1",
-    "handlebars": "^4.3.0",
+    "handlebars": "^4.7.7",
     "hogan": "^1.0.2",
     "html-entities": "^1.1.2",
     "html-minifier": "^4.0.0",
