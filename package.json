@@ -33,7 +33,7 @@
     "selenium-download": "^2.0.14",
     "selenium-server": "^3.8.1",
     "speakingurl": "^1.1.1",
-    "underscore": "^1.7.0",
+    "underscore": "^1.12.1",
     "xml2js": "^0.4.6"
   },
   "scripts": {
